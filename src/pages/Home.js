@@ -4,7 +4,7 @@ import PopularRepositores from '../components/MainContent/PopularRepositores';
 import SideBar from '../components/SideBar/SideBar';
 import GitHubCalendar from 'react-github-calendar';
 
-const Page = () => {
+const Home = () => {
 
   const [pageDetails, setPageDetails] = useState();
   const [pageRepos, setPageRepos] = useState();
@@ -17,7 +17,7 @@ const Page = () => {
       setPageDetails(obj);
     };
     const getPageRepos = async () => {
-      const endpoint = 'https://api.github.com/users/facebook/repos';
+      const endpoint = 'https://api.github.com/users/camunda/repos';
       const response = await fetch(endpoint);
       const obj = await response.json();
       const arrayRepos = obj.slice(0, 6);
@@ -57,7 +57,7 @@ const Page = () => {
             <h2 className="text-2xl text-gray-project opacity-50">Contribution</h2>
             <div className="flex justify-center items-center mt-8 py-4 px-8 rounded-lg border border-white-project">
               <GitHubCalendar
-                username="pgp27"
+                username="camunda"
                 color="#7B61FF"
                 fontSize={ 18 }
                 blockMargin={ 6 }
@@ -75,4 +75,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Home;
