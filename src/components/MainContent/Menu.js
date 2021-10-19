@@ -21,7 +21,7 @@ const Menu = () => {
             autoComplete="off"
             autoCorrect="off"
             placeholder="Search or Jump"
-            className="outline-none px-2 rounded-full"
+            className="outline-none px-2 rounded-full bg-white-project"
           />
         </div>
         <div className="flex">
@@ -49,7 +49,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex justify-center mt-20">
-        <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Overview</button>
+        <button type="button" className="p-1 mx-8 text-purple-project underline">Overview</button>
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Repositories</button>
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Packages</button>
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Projects</button>

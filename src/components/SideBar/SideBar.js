@@ -3,7 +3,7 @@ import InfoCard from './InfoCard';
 import ProfileCard from './ProfileCard';
 import '../../styles/SideBar.css';
 
-const SideBar = ({ image, name, nick, followers, following, bio, company, location, email }) => {
+const SideBar = ({ image, name, nick, followers, following, stars, bio, company, location, email }) => {
   return (
     <div className="w-80 h-full flex flex-col text-gray-project">
       <ProfileCard
@@ -12,6 +12,7 @@ const SideBar = ({ image, name, nick, followers, following, bio, company, locati
         nick={ nick }
         followers={ followers }
         following={ following }
+        stars={ stars }
       />
       <InfoCard
         bio={ bio }

@@ -10,6 +10,7 @@ const Page = () => {
   const { pageName } = useParams();
   const [pageDetails, setPageDetails] = useState();
   const [pageRepos, setPageRepos] = useState();
+  const [stars, setStars] = useState();
 
   useEffect(() => {
     const getPageDetails = async () => {
@@ -24,24 +25,31 @@ const Page = () => {
       const obj = await response.json();
       const arrayRepos = obj.slice(0, 6);
       setPageRepos(arrayRepos);
+      const arrayStars = [];
+      obj.forEach(({ stargazers_count }) => {
+        arrayStars.push(stargazers_count);
+      });
+      const starsCount = arrayStars.reduce((a, b) => a + b);
+      setStars(starsCount);
     };
     getPageDetails();
     getPageRepos();
   }, [pageName]);
 
-  console.log(pageDetails);
-  console.log(pageRepos);
-
   if (pageDetails && pageRepos) {
     const { avatar_url, name, login, followers, following, bio, company, location, email } = pageDetails;
+    const followersNumber = followers < 10 ? `0${ followers }` : followers;
+    const followingNumber = following < 10 ? `0${ following }` : following;
+    const starsNumber = stars < 10 ? `0${ stars }` : stars;
     return (
       <div className="w-full flex">
         <SideBar
           image={ avatar_url }
           name={ name }
           nick={ login }
-          followers={ followers }
-          following={ following }
+          followers={ followersNumber }
+          following={ followingNumber }
+          stars={ starsNumber }
           bio={ bio }
           company={ company }
           location={ location }

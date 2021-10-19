@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileCard = ({ image, name, nick, followers, following }) => {
+const ProfileCard = ({ image, name, nick, followers, following, stars }) => {
   return (
     <div className="flex flex-col p-4 justify-center items-center text-center">
       <h1 className="pt-6 pb-12 text-2xl text-purple-project">GitHub</h1>
@@ -17,13 +17,17 @@ const ProfileCard = ({ image, name, nick, followers, following }) => {
       <h2 className="p-1 mt-12 ">{ name }</h2>
       <h3 className="p-1 opacity-30">{ nick }</h3>
       <div className="flex mt-2">
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-between">
           <span className="p-2 text-2xl">{ followers }</span>
-          <span className="p-2 opacity-50">followers</span>
+          <span className="p-2 opacity-50">Followers</span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-between">
           <span className="p-2 text-2xl">{ following }</span>
-          <span className="p-2 opacity-50">following</span>
+          <span className="p-2 opacity-50">Following</span>
+        </div>
+        <div className="flex flex-col justify-between">
+          <span className="p-2 text-2xl">{ stars }</span>
+          <span className="p-2 opacity-50">Stars</span>
         </div>
       </div>
       <button
