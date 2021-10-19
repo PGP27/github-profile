@@ -28,7 +28,7 @@ const ProfileCard = ({ image, name, nick, followers, following }) => {
       </div>
       <button
         type="button"
-        className="w-full py-1 mt-4 bg-purple-project text-white rounded-lg"
+        className="w-full py-1 mt-4 bg-purple-project text-white rounded-lg hover:opacity-80"
       >
         Following
       </button>
