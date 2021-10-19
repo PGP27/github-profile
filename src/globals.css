@@ -69,6 +69,33 @@ a, p, strong, span, h1, h2, h3 {
 	width: 100%;
 }
 
+.ellipse1 {
+  position: absolute;
+  width: 160px;
+  height: 112px;
+  border: 1px solid #7B61FF;
+  border-radius: 50%;
+  transform: rotate(60deg);
+}
+
+.ellipse2 {
+  position: absolute;
+  width: 160px;
+  height: 112px;
+  border: 1px solid #00FFB2;
+  border-radius: 50%;
+  transform: rotate(130deg);
+}
+
+.ellipse3 {
+  position: absolute;
+  width: 160px;
+  height: 112px;
+  border: 1px solid #FFA0A0;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
 .react-activity-calendar__legend-colors {
 	display: flex;
 	align-items: center;

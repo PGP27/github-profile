@@ -1,7 +1,6 @@
 import React from 'react';
 import InfoCard from './InfoCard';
 import ProfileCard from './ProfileCard';
-import '../../styles/SideBar.css';
 
 const SideBar = ({ image, name, nick, followers, following, stars, bio, company, location, email }) => {
   return (

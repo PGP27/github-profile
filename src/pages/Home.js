@@ -3,6 +3,7 @@ import Menu from '../components/MainContent/Menu';
 import PopularRepositores from '../components/MainContent/PopularRepositores';
 import SideBar from '../components/SideBar/SideBar';
 import GitHubCalendar from 'react-github-calendar';
+import { fetchApi } from '../service/api';
 
 const Home = () => {
 
@@ -12,15 +13,11 @@ const Home = () => {
 
   useEffect(() => {
     const getPageDetails = async () => {
-      const endpoint = 'https://api.github.com/users/camunda';
-      const response = await fetch(endpoint);
-      const obj = await response.json();
+      const obj = await fetchApi('camunda');
       setPageDetails(obj);
     };
     const getPageRepos = async () => {
-      const endpoint = 'https://api.github.com/users/camunda/repos';
-      const response = await fetch(endpoint);
-      const obj = await response.json();
+      const obj = await fetchApi('camunda/repos');
       const arrayRepos = obj.slice(0, 6);
       setPageRepos(arrayRepos);
       const arrayStars = [];
