@@ -5,7 +5,7 @@ import notifications from '../../images/notifications.svg';
 
 const Menu = () => {
   return (
-    <div className="w-full h-screen flex flex-col p-8 shadow-2xl text-gray-project">
+    <div className="w-full flex flex-col p-8 text-gray-project">
       <div className="flex justify-between">
         <div className="flex items-center border rounded-full">
           <button type="button" className="mx-1 rounded-full">
@@ -48,7 +48,7 @@ const Menu = () => {
 
         </div>
       </div>
-      <div className="flex justify-center py-20">
+      <div className="flex justify-center mt-20">
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Overview</button>
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Repositories</button>
         <button type="button" className="p-1 mx-8 opacity-70 hover:underline">Packages</button>

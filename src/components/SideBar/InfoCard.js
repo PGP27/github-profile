@@ -34,7 +34,7 @@ const InfoCard = ({ bio, company, location, email }) => {
         </div>
       </div>
       <div>
-        <button type="button" className="p-1 mt-28 opacity-50 hover:underline">Block or report</button>
+        <button type="button" className="p-1 mt-12 opacity-50 hover:underline">Block or report</button>
       </div>
     </div>
   );

@@ -5,13 +5,21 @@ module.exports = {
     backgroundColor: theme => ({
       'purple-project': '#7B61FF',
       'gray-project': '#16191A',
+      'white-project': '#FBFBFB',
       'white': '#FFFFFF',
     }),
     textColor: {
       'purple-project': '#7B61FF',
       'gray-project': '#16191A',
+      'white-project': '#FBFBFB',
       'white': '#FFFFFF',
-    }
+    },
+    borderColor: theme => ({
+      'purple-project': '#7B61FF',
+      'gray-project': '#16191A',
+      'white-project': '#FBFBFB',
+      'white': '#FFFFFF',
+     }),
   },
   variants: {
     extend: {},
