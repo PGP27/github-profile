@@ -21,7 +21,7 @@ const Menu = () => {
             autoComplete="off"
             autoCorrect="off"
             placeholder="Search or Jump"
-            className="outline-none px-2 rounded-full bg-white-project"
+            className="w-96 outline-none px-2 rounded-full bg-white-project"
           />
         </div>
         <div className="flex">

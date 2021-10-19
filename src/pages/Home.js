@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { fetchApi } from '../service/api';
+import Loading from '../components/Loading/Loading';
+import SideBar from '../components/SideBar/SideBar';
 import Menu from '../components/MainContent/Menu';
 import PopularRepositores from '../components/MainContent/PopularRepositores';
-import SideBar from '../components/SideBar/SideBar';
 import GitHubCalendar from 'react-github-calendar';
-import { fetchApi } from '../service/api';
+
 
 const Home = () => {
 
@@ -76,7 +78,9 @@ const Home = () => {
   }
 
   return (
-    <div>Carregando...</div>
+    <div className="w-full h-full flex justify-center items-center">
+      <Loading />
+    </div>
   );
 };
 
