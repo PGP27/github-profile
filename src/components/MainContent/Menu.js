@@ -5,7 +5,7 @@ import notifications from '../../images/notifications.svg';
 
 const Menu = () => {
   return (
-    <div className="w-full flex flex-col p-8">
+    <div className="w-full h-screen flex flex-col p-8 shadow-2xl">
       <div className="flex justify-between">
         <div className="flex items-center border border-gray-400 rounded-full">
           <button type="button" className="mx-1 hover:bg-gray-200 rounded-full">
