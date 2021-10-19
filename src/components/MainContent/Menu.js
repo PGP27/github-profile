@@ -7,7 +7,7 @@ const Menu = () => {
   return (
     <div className="w-full flex flex-col p-8 text-gray-project">
       <div className="flex justify-between">
-        <div className="flex items-center border rounded-full">
+        <div className="flex items-center border rounded-full bg-white-project">
           <button type="button" className="mx-1 rounded-full">
             <img
               src={ search }
@@ -35,14 +35,14 @@ const Menu = () => {
             <img
               src={ notifications }
               alt="Notifications icon"
-              className="p-1 h-8 w-8"
+              className="p-1 h-8 w-8 transition hover:opacity-80"
             />
           </button>
           <button type="button" className="mx-2 rounded-full">
             <img
               src={ account }
               alt="Account icon"
-              className="p-1 h-8 w-8"
+              className="p-1 h-8 w-8 transition hover:opacity-80"
             />
           </button>
 

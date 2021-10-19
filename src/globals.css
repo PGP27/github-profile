@@ -65,12 +65,18 @@ a, p, strong, span, h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
 }
 
+#root {
+	width: 100%;
+}
+
 .react-activity-calendar__legend-colors {
 	display: flex;
 	align-items: center;
 	margin-top: 0.5rem;
 }
 
-#root {
-	width: 100%;
+@media screen and (min-height: 863px) {
+  .main-content {
+		height: 100vh;
+	}
 }

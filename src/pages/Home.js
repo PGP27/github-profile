@@ -17,7 +17,7 @@ const Page = () => {
       setPageDetails(obj);
     };
     const getPageRepos = async () => {
-      const endpoint = 'https://api.github.com/users/camunda/repos';
+      const endpoint = 'https://api.github.com/users/facebook/repos';
       const response = await fetch(endpoint);
       const obj = await response.json();
       const arrayRepos = obj.slice(0, 6);
@@ -33,7 +33,7 @@ const Page = () => {
   if (pageDetails && pageRepos) {
     const { avatar_url, name, login, followers, following, bio, company, location, email } = pageDetails;
     return (
-      <div className="flex">
+      <div className="w-full flex">
         <SideBar
           image={ avatar_url }
           name={ name }
@@ -45,14 +45,17 @@ const Page = () => {
           location={ location }
           email={ email }
         />
-        <div className="w-full h-screen flex flex-col shadow-2xl">
+        <div className="main-content w-full flex flex-col shadow-2xl">
           <Menu />
-          <PopularRepositores
-            repositores={ pageRepos }
-          />
-          <div className="flex flex-col p-8">
-            <h2 className="text-2xl">Contribution</h2>
-            <div className="flex justify-center items-center m-8 p-8 rounded-lg border border-white-project">
+          <div className="flex flex-col px-8">
+            <h2 className="text-2xl text-gray-project opacity-50">Popular Repositores</h2>
+            <PopularRepositores
+              repositores={ pageRepos }
+            />
+          </div>
+          <div className="flex flex-col px-8">
+            <h2 className="text-2xl text-gray-project opacity-50">Contribution</h2>
+            <div className="flex justify-center items-center mt-8 py-4 px-8 rounded-lg border border-white-project">
               <GitHubCalendar
                 username="pgp27"
                 color="#7B61FF"
